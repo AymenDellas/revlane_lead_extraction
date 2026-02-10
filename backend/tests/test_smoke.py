@@ -27,12 +27,11 @@ def test_user_agent_rotation():
     assert isinstance(ua, str)
     assert len(ua) > 10
 
-@pytest.mark.asyncio
-async def test_random_delay():
+def test_random_delay():
     """Test that random delay waits for at least the min duration."""
     # We use a very short delay for testing to not slow down suites
     import time
     start = time.time()
-    await random_delay(0.1, 0.2)
+    asyncio.run(random_delay(0.1, 0.2))
     elapsed = time.time() - start
     assert elapsed >= 0.1

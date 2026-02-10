@@ -127,6 +127,8 @@ async def export_scan(scan_id: str, format: str = "csv"):
             "LinkedIn": lead.get("linkedin", ""),
             "Twitter": lead.get("twitter", ""),
             "Instagram": lead.get("instagram", ""),
+            "Phone": "; ".join(lead.get("phones", [])),
+            "Quality Score": lead.get("quality_score", 0),
             "H1": lead.get("h1", ""),
         })
 
