@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+sse-starlette
+playwright
+playwright-stealth
+beautifulsoup4
+lxml
+pandas
+aiosmtplib
+dnspython
+python-dotenv
+httpx
